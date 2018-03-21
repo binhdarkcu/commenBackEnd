@@ -4,15 +4,15 @@
           <div class="container">
             <div class="row">
               <div class="section-filter__main">
-                <div class="section-filter__main--nav">
-                    <a href="javascript:void(0)" class="filter active" data-filter="all">All</a>
+                <div class="section-filter__main--nav portfolio-controllers">
+                    <a href="javascript:void(0)" class="filter-btn active" data-filter="all">All</a>
                   <?php
                      $categories = get_categories( array(
                           //'orderby' => 'name',
                           'parent'  => 0
                       ) );
                       foreach ( $categories as $category ) {
-                          printf( '<a class="filter" data-filter=".'.$category->slug.'" href="javascript:void(0)">%2$s</a>',
+                          printf( '<a class="filter-btn" data-filter=".'.$category->slug.'" href="javascript:void(0)">%2$s</a>',
                               esc_url( get_category_link( $category->term_id ) ),
                               esc_html( $category->name )
                           );

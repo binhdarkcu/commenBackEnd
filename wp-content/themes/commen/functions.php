@@ -54,11 +54,12 @@ function tk_add_scripts_styles(){
      }
     wp_enqueue_script('tk-bootstrap-js',TEMPLATE_PATH.'/asset/js/bootstrap.min.js',array('jquery'));
     wp_enqueue_script('tk-easing-js',TEMPLATE_PATH.'/js/jquery.easing.1.3.js',array('jquery'));
+    wp_enqueue_script('tk-filter-min',TEMPLATE_PATH.'/js/filter.min.js',array('jquery','filter-min'));
    wp_enqueue_script('tk-modernizr-js',TEMPLATE_PATH.'/js/jquery.waterwheelCarousel.min.js',array('jquery'));
     wp_enqueue_script('tk-site-main',TEMPLATE_PATH.'/js/class.SiteMain.js',array('jquery'));
     wp_enqueue_script('tk-slick-js',TEMPLATE_PATH.'/js/slick.js',array('jquery'));
     wp_enqueue_script('tk-main',TEMPLATE_PATH.'/js/main.js',array('jquery','tk-site-main'));
-    wp_enqueue_script('tk-filter-min',TEMPLATE_PATH.'/js/filter.min.js',array('jquery','filter-min'));
+
 
     wp_localize_script('tk-main','TK_VARS',$vars);
 

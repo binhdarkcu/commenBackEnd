@@ -31,48 +31,57 @@ var SiteMain = (function() {
 
 	function initFilterProduct(ele){
 		$(ele).filterData({
-		  containerWidth : 0,
-		  containerHeight : 0,
-		  nOfRow : 0,
-		  nOfColumn : 0,
-		  aspectRatio : '1:1',
-		  containerMargin : '0px auto',
-		  itemWidth : 0,
-		  itemHeight : 0,
-		  itemDistance : 20,
-		  animationSpeed : 300,
-		  containerAnimationDelay : 500,
-		  allContainerAnimationSpeed : 500,
-		  easing                      : 'swing',
-		  margin : 0,
-		  filterController : '.filter',
-		  responsive : [
-		    {
-		        breakpoint : 1200,
-		        containerWidth : 1170,
-		        settings : {
-		            nOfRow : 3,
-		            nOfColumn : 3
-		        }
-		    },
-		    {
-		        breakpoint : 992,
-		        containerWidth : 970,
-		        settings : {
-		            nOfRow : 3,
-		            nOfColumn : 3
-		        }
-		    },
-		    {
-		        breakpoint : 768,
-		        containerWidth : 750,
-		        settings : {
-		            nOfRow : 2,
-		            nOfColumn : 2
-		        }
-		    }
-		  ]
+			aspectRatio: '8:5',
+			nOfRow : 3,
+			itemDistance : 0
 		});
+		$('.portfolio-controllers .filter-btn').on('click',function(){
+			$('.portfolio-controllers .filter-btn').removeClass('active-work');
+			$(this).addClass('active-work');
+		});
+		// $(ele).filterData({
+		//   containerWidth : 0,
+		//   containerHeight : 0,
+		//   nOfRow : 0,
+		//   nOfColumn : 0,
+		//   aspectRatio : '1:1',
+		//   containerMargin : '0px auto',
+		//   itemWidth : 0,
+		//   itemHeight : 0,
+		//   itemDistance : 20,
+		//   animationSpeed : 300,
+		//   containerAnimationDelay : 500,
+		//   allContainerAnimationSpeed : 500,
+		//   easing                      : 'swing',
+		//   margin : 0,
+		//   filterController : '.filter-btn',
+		//   responsive : [
+		//     {
+		//         breakpoint : 1200,
+		//         containerWidth : 1170,
+		//         settings : {
+		//             nOfRow : 3,
+		//             nOfColumn : 3
+		//         }
+		//     },
+		//     {
+		//         breakpoint : 992,
+		//         containerWidth : 970,
+		//         settings : {
+		//             nOfRow : 3,
+		//             nOfColumn : 3
+		//         }
+		//     },
+		//     {
+		//         breakpoint : 768,
+		//         containerWidth : 750,
+		//         settings : {
+		//             nOfRow : 2,
+		//             nOfColumn : 2
+		//         }
+		//     }
+		//   ]
+		// });
 	}
 
 	function animateHome(){
