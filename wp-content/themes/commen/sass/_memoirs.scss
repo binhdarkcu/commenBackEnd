@@ -1,0 +1,103 @@
+/* MEMOIRS TITLE PAGE */
+.homepage.memoirstitle_page {
+  text-align: center;
+
+  h2 {
+    padding: 40px 0;
+    margin: 0;
+  }
+
+  .img-banner {
+    width: 100%;
+  }
+
+  .section-filter {
+    padding: 55px 0;
+
+    p {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .row-2col {
+      margin: 20px 0 53px;
+      color: $orange;
+      text-align: left;
+
+      img {
+        width: 100%;
+      }
+
+      h3 {
+        @include GothamBold(39px);
+        line-height: 1.3;
+      }
+
+      span {
+        @include GothamBold(21px);
+        display: inline-block;
+        margin: 10px 0 32px;
+      }
+
+    }
+
+  }
+
+}
+
+/* MEMOIRS PAGE */
+.homepage.memoirs_page {
+  padding-bottom: 58px;
+
+  h2 {
+    margin: 0;
+    padding: 40px 0 15px;
+    text-transform: uppercase;
+  }
+
+
+  .section-filter__main {
+    margin-bottom: 0;
+  }
+
+  .section-filter__main--nav {
+    margin-bottom: 54px;
+
+    a {
+      @include GothamBook(23px);
+    }
+
+  }
+
+  .section-filter__main--content {
+    margin-bottom: 0;
+
+    .filter-item {
+      border: 0;
+      padding: 14px 17px 20px;
+      margin-bottom: 27px;
+
+      img {
+        margin-bottom: 25px;
+      }
+
+      p {
+        @include GothamLight(14px);
+        width: 80%;
+        margin: 0 auto 30px;
+      }
+
+      a {
+        @include GothamBold(14px);
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+}

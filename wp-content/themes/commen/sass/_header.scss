@@ -1,0 +1,111 @@
+header {
+    .navbar-right {
+        margin-right: 0;
+    }
+    .navbar-default {
+        background: #fff;
+        padding: 15px 0 10px;
+        a.cartIcon {
+            background: url('../images/cart-icon.png') no-repeat;
+            width: 30px;
+            height: 30px;
+            background-size: 30px;
+            padding-right: 0;
+            margin-left: 22px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        &.navbar-shrink{
+            background: #fff;
+            padding:5px 0;
+            .nav {
+                li {
+                    a.cartIcon {
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+        .nav {
+            li {
+                a {
+                    font-family: 'GothamBook';
+                    font-size: 14px;
+                    color: #000;
+                    padding: 15px 30px;
+                    &:hover {
+                        color: #fff;
+                        background: #fd8204;
+                    }
+                    &.cartIcon {
+                        padding: 15px;
+                        &:hover {
+                            background: url('../images/cart-icon.png') no-repeat;
+                            background-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .navbar-brand {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.main-slide {
+    margin-top: 75px;
+}
+.signUpFree{
+    background: #F5DB6B;
+    min-height: 59px;
+    &.navbar-fixed-top {
+        top: 75px;
+    }
+    &.navbar-shrink {
+        &.navbar-fixed-top {
+            top: 60px;
+        }
+    }
+
+    .txt {
+        color: #ff8300;
+        font-size: 20px;
+        font-family: "GothamBold";
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .signupBox {
+        float: right;
+        margin-top: 6px;
+        .orangeBox {
+            background: #faeeb5;
+            padding: 10px 0 10px 18px;
+            float: left;
+            min-height: 46px;
+        }
+        span.title {
+            font-size: 20px;
+            font-family: "GothamBold";
+            color: #ff8300;
+        }
+        input[type="text"] {
+            color: #ff8300;
+            font-family: "GothamBold";
+            font-size: 16px;
+            background: transparent;
+            height: 23px;
+            padding-left: 0;
+            padding-right: 10px;
+            outline: none;
+        }
+        input[type="submit"] {
+            font-family: "GothamBold";
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+}

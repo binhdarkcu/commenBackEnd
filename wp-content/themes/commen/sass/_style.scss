@@ -1,0 +1,375 @@
+
+/* ! PRIMARY STYLES */
+html, body{width:100%; min-width:640px; }
+body {
+	font: $fontArial12; color:#fff;
+	background: #fff;
+}
+a{text-decoration: none;}
+.clear{clear:both;}
+
+.content700{width:700px;}
+.content820{width:820px;}
+.content890{width:890px;}
+.content940{width:940px;}
+
+.wrapper{
+  width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn-button {
+	font-size: 20px;
+	font-family: "GothamBook";
+	line-height: 1.1;
+	background: #fd8204;
+	color: #fff;
+	padding: 12px 25px;
+}
+
+.commonpage {
+	  @include GothamBook(12px);
+	  color: #000;
+	  line-height: 1.5;
+}
+
+.visible-1024 {
+	display: none !important;
+}
+
+.carousel-container {
+	width: 100%;
+}
+
+.homepage {
+
+  /* slider */
+  #main-slide.carousel {
+
+    .carousel-indicators li {
+      width: 20px !important;
+      border: 0 !important;
+      height: 20px !important;
+      background: $yellow-1;
+	  margin: 0 10px!important;
+      &.active {
+        background: #fd8204;
+      }
+
+    }
+
+    .carousel-inner {
+
+      .item {
+        background: url('../images/banner.jpg') center no-repeat;
+        background-size: cover;
+
+        .col-md-12 {
+          width: 50%;
+          float: right;
+          position: relative;
+          top: -17%;
+          text-align: left;
+
+            p {
+              @include GothamBold(45px);
+              color: $orange;
+              text-align: left;
+              margin-bottom: 25px;
+            }
+
+            span {
+              @include GothamBold(25px);
+              text-transform: uppercase;
+              color: $orange;
+              display: block;
+              margin-bottom: 33px;
+            }
+
+            a.btn {
+              @include GothamBold(26px);
+              color: #fff;
+              padding: 20px 50px;
+              background: $orange;
+              border-color: transparent;
+
+              &:hover {
+                border: 1px solid #fff;
+                background: transparent;
+              }
+
+            }
+
+        }
+
+
+      }
+
+      .slider-content {
+        right: 0;
+      }
+
+    }
+
+  }
+
+  /* slider 2 */
+  .carousel {
+    position: relative;
+    margin-top: 15px;
+
+    .row-title {
+      margin-bottom: 50px;
+    }
+
+    .arr {
+      position: absolute;
+      width: 28px;
+      height: 52px;
+      background-size: cover;
+      top: 50%;
+      cursor: pointer;
+      margin-top: -26px;
+
+      &.prev {
+        background: url('../images/arr-prev.png') no-repeat center;
+        background-size: cover;
+        left: -60px;
+      }
+
+      &.next {
+        background: url('../images/arr-next.png') no-repeat center;
+        background-size: cover;
+        right: -60px;
+      }
+
+    }
+
+    #carousel1 {
+      height: 350px;
+      position:relative;
+      clear:both;
+      overflow:hidden;
+      width: 100%;
+      margin: auto;
+
+      img {
+        visibility:hidden; /* hide images until carousel can handle them */
+        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+        border: 16px solid $yellow-1;
+      }
+    }
+  }
+
+  h2 {
+    @include GothamBold(45px);
+    color: $orange;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+}
+
+/* filter */
+.section-filter {
+  padding: 50px 0 35px;
+  background: url('../images/filter-bg.png') center no-repeat;
+  background-size: cover;
+
+
+  &__main {
+	margin-bottom: 25px;
+
+	&--nav {
+	  text-align: center;
+	  margin-bottom: 25px;
+
+	  a {
+		@include GothamBold(25px);
+		color: $orange;
+		margin-right: 40px;
+
+		&:last-child {
+		  margin-right: 0;
+		}
+
+	  }
+
+	}
+
+	&--content {
+	  margin-bottom: 30px;
+
+	  .filter-item {
+		border: 9px solid #fff;
+		padding: 16px 18px 20px;
+		text-align: center;
+		background: $yellow-1;
+
+		img {
+		  width: 100%;
+		  margin-bottom: 30px;
+		}
+
+		p, a {
+		  color: #000;
+		  @include GothamBold(22px);
+		}
+
+		p {
+		  margin-bottom: 30px;
+		  @include GothamLight(22px);
+		}
+
+	  }
+
+	}
+
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .homepage {
+    .section-filter__main--content .col-md-4 {
+      margin-bottom: 20px;
+      word-break: break-word;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+
+    #main-slide .item .slider-content {
+      display: block
+    }
+
+    #main-slide.carousel .carousel-inner .item:first-child .col-md-12 p {
+      font-size: 20px;
+    }
+
+    #main-slide.carousel .carousel-inner .item:first-child .col-md-12 span {
+      font-size: 19px;
+    }
+
+    #main-slide.carousel .carousel-inner .item:first-child .col-md-12 a.btn {
+      font-size: 17px;
+      padding: 10px 30px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+	body .visible-1024 {
+		display: block !important;
+	}
+
+}
+
+/* begin header */
+header {
+
+  nav.navbar-fixed-top {
+    z-index: 1050;
+	border-width: 0;
+	border: none;
+	min-height: 76px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  header {
+
+    nav {
+
+      .navbar-header {
+        position: relative;
+
+        .navbar-brand {
+          display: table;
+          margin: auto;
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+
+          img {
+            margin: auto;
+          }
+        }
+
+      }
+
+      &.navbar-default .navbar-toggle {
+        margin-right: 0;
+        background: transparent;
+        border: none;
+
+        .icon-bar {
+          background: #000;
+        }
+
+        &:hover, &:focus {
+          background: transparent;
+          border: none;
+
+          .icon-bar {
+            background: #000;
+          }
+
+        }
+
+      }
+
+    }
+
+    .signUpFree .signupBox .orangeBox {
+      display: none;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  header .navbar-default .navbar-header a.cartIcon {
+    display: none;
+  }
+
+}
+
+/* end header */
+
+.btn-style {
+  @include GothamBold(25px);
+  color: $orange;
+  padding: 10px 25px;
+  display: table;
+  margin: auto;
+  background: $yellow-1;
+  text-decoration: none;
+  &:hover{
+	  background: #fd8204;
+	  color: #fff;
+	  text-decoration: none;
+  }
+}
+
+.paddingBody {
+	margin-top: 133px!important;
+}

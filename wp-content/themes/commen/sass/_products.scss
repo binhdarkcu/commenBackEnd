@@ -1,0 +1,31 @@
+.homepage.memoirs_page.products_page {
+  padding-bottom: 0;
+
+  .section-filter__main--nav {
+    margin-bottom: 35px;
+  }
+
+  .products_page-item {
+    margin-bottom: 25px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      border: 14px solid $yellow-1;
+      margin-bottom: 22px;
+    }
+
+    p {
+      @include GothamBold(21px);
+      color: $orange;
+      margin-bottom: 8px;
+    }
+
+    span {
+      @include GothamBook(21px);
+      color: #000;
+    }
+
+  }
+
+}

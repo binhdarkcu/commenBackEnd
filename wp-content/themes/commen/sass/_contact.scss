@@ -1,0 +1,73 @@
+/*Contact*/
+.contactPage {
+	&.section-filter{
+		min-height: 798px;
+        padding-top: 60px;
+        background: url(../images/contact-filter-bg.png) no-repeat top center;
+		background-size: cover;
+	}
+    h3 {
+        @include GothamBold(45px);
+        color: #ff8300;
+        padding-bottom: 35px;
+    }
+    .contactForm {
+        width: 835px;
+        display: table;
+        margin: 0 auto;
+        .contactRow {
+            position: relative;
+            border: 2px solid #ff8300;
+            width: 100%;
+            background: #fff;
+            height: 28px;
+            margin-bottom: 15px;
+            label {
+                @include GothamBook(15px);
+                color: #ff8300;
+                padding-left: 10px;
+                position: relative;
+                top: -1px;
+            }
+            input[type="text"] {
+                @include GothamBook(15px);
+                color: #ff8300;
+                height: 25px;
+                border: none;
+                background: transparent;
+                outline: none;
+                width: 90%;
+            }
+            &.subject {
+                input[type="text"] {
+                    width: 70%;
+                }
+            }
+            &.message{
+                height: 330px;
+                label{
+                    margin-top: 12px;
+                }
+                textarea {
+                    padding-top: 10px;
+                    resize: none;
+                    display: block;
+                    width: 98%;
+                    padding-left: 10px;
+                    outline: none;
+                    height: 90%;
+                    @include GothamBook(15px);
+                    color: #ff8300;
+                }
+            }
+        }
+        input[type="submit"] {
+            color: #fff;
+            @include GothamBook(15px);
+            background: #fd8204;
+            padding: 10px 15px;
+            min-width: 250px;
+            text-align: left;
+        }
+    }
+}

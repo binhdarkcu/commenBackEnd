@@ -1,0 +1,54 @@
+$fontArial12: normal 11px/1.2 'GothamBook', Arial, Helvetica, sans-serif;
+
+@mixin GothamBook( $value ) {
+	font-family: 'GothamBook', cursive;
+	font-size:$value;
+	line-height:1.1;
+	font-weight:normal;
+}
+
+@mixin GothamBold( $value ) {
+	font-family: 'GothamBold', cursive;
+	font-size:$value;
+	line-height:1.1;
+	font-weight:normal;
+}
+
+@mixin GothamLight( $value ) {
+	font-family: 'GothamLight', cursive;
+	font-size:$value;
+	line-height:1.1;
+	font-weight:normal;
+}
+
+/*COLOR*/
+$colorBlack:#000;
+
+@mixin Algerian( $value, $lineheight:1.2 ) {
+	font-family: 'GothamBook', Arial, sans-serif;
+	font-size: $value;
+	line-height: $lineheight;
+	font-weight: normal;
+}
+/* colors */
+$orange: #fd8204;
+$gray: #999999;
+$yellow-1: #f5dc6a;
+
+@mixin objAbsoluteMiddle() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+	-webkit-transform: translate(-50%, -50%); /* Safari */
+}
+
+@mixin clearObjAbsoluteMiddle() {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: translate(0, 0);
+	-ms-transform: translate(0, 0); /* IE 9 */
+	-webkit-transform: translate(0, 0); /* Safari */
+}

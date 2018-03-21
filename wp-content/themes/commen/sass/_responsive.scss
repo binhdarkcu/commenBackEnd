@@ -1,0 +1,156 @@
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+    .homepage {
+        #main-slide.carousel {
+            .carousel-inner {
+                .item {
+                    .col-md-12 a.btn {
+                       font-size: 23px;
+                       padding: 20px 30px;
+                   }
+                }
+            }
+        }
+        .carousel {
+            .arr{
+                &.prev {
+                    left: 0;
+                }
+                &.next {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .contactPage {
+        .contactForm {
+            width: 640px;
+            .contactRow {
+                input[type="text"] {
+                    width: 80%;
+                }
+                &.subject {
+                    input[type="text"] {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+    .homepage {
+        #main-slide.carousel {
+            .carousel-inner {
+                .item {
+                    .col-md-12 {
+                        p {
+                            font-size: 32px;
+                        }
+                         a.btn {
+                             font-size: 16px;
+                         }
+                    }
+                }
+            }
+        }
+    }
+    .homepage .carousel .arr {
+        display: none;
+    }
+    .homepage .carousel #carousel1 {
+    	width: 97%;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+    .contactPage {
+        .contactForm {
+            width: 85%;
+            .contactRow{
+                input[type="text"] {
+                    width: 80%;
+                }
+                &.subject {
+                    input[type="text"] {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+      /* memoirs-page */
+    .homepage.memoirs_page .section-filter__main--content .col-md-4 {
+      width: 50%;
+    }
+    .homepage.memoirstitle_page {
+
+       .section-filter .row-2col {
+
+          img:first-of-type {
+            margin-bottom: 30px;
+          }
+
+       }
+
+    }
+    /* about-page */
+    .homepage.aboutpage {
+
+      .marginbottom img {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+    }
+	.homepage {
+        #main-slide.carousel {
+            .carousel-inner {
+                .slider-content {
+                    display: none;
+                }
+                .item{
+                    height: 280px;
+                }
+            }
+        }
+		.carousel {
+			.arr{
+				display: none;
+			}
+			#carousel1 {
+				width: 85%;
+			}
+		}
+        .section-filter__main--content {
+            .col-md-4 {
+                width: 90%;
+                display: table;
+                margin: 0 auto 20px;
+            }
+        }
+        .section-filter {
+            h2 {
+                margin-bottom: 25px;
+            }
+        }
+        .section-filter__main--nav {
+            margin-bottom: 30px;
+        }
+	}
+    footer {
+        p, a{
+            font-size: 16px;
+        }
+        .customWidth02{
+            width: 25%;
+        }
+        .customWidth04 {
+            width: 37%;
+
+        }
+        .customWidthLast {
+            width: 37%;
+        }
+    }
+
+}
