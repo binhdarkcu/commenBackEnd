@@ -7,6 +7,7 @@ var SiteMain = (function() {
    }
 
 	function init(){
+		initFilterProduct('.filter-products')
 		signUpEvent();
 		carousel_3d();
 		respone();
@@ -25,9 +26,52 @@ var SiteMain = (function() {
 		} else {
 			$('.welcomeBox').hide()
 		}
-		$(window).scroll(function(){
-		       // $(".cd-quick-view")
-		       //        .animate({"marginTop": ($(window).scrollTop() + 50) + "px"}, 0 );
+		initFilter('.section-filter__main--content')
+	}
+
+	function initFilterProduct(ele){
+		$(ele).filterData({
+		  containerWidth : 0,
+		  containerHeight : 0,
+		  nOfRow : 0,
+		  nOfColumn : 0,
+		  aspectRatio : '1:1',
+		  containerMargin : '0px auto',
+		  itemWidth : 0,
+		  itemHeight : 0,
+		  itemDistance : 20,
+		  animationSpeed : 300,
+		  containerAnimationDelay : 500,
+		  allContainerAnimationSpeed : 500,
+		  easing                      : 'swing',
+		  margin : 0,
+		  filterController : '.filter',
+		  responsive : [
+		    {
+		        breakpoint : 1200,
+		        containerWidth : 1170,
+		        settings : {
+		            nOfRow : 3,
+		            nOfColumn : 3
+		        }
+		    },
+		    {
+		        breakpoint : 992,
+		        containerWidth : 970,
+		        settings : {
+		            nOfRow : 3,
+		            nOfColumn : 3
+		        }
+		    },
+		    {
+		        breakpoint : 768,
+		        containerWidth : 750,
+		        settings : {
+		            nOfRow : 2,
+		            nOfColumn : 2
+		        }
+		    }
+		  ]
 		});
 	}
 

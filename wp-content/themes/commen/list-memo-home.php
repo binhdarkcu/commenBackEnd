@@ -5,43 +5,43 @@
             <div class="row">
               <div class="section-filter__main">
                 <div class="section-filter__main--nav">
-                    <a href="#">All</a>
+                    <a href="javascript:void(0)" class="filter active" data-filter="all">All</a>
                   <?php
                      $categories = get_categories( array(
                           //'orderby' => 'name',
                           'parent'  => 0
                       ) );
                       foreach ( $categories as $category ) {
-                          printf( '<a href="%1$s">%2$s</a>',
+                          printf( '<a class="filter" data-filter=".'.$category->slug.'" href="javascript:void(0)">%2$s</a>',
                               esc_url( get_category_link( $category->term_id ) ),
                               esc_html( $category->name )
                           );
                       }
                    ?>
                 </div>
-                <div class="section-filter__main--content clearfix">
+                <div class="section-filter__main--content clearfix filter-products">
                   <!-- item -->
-                  <?php 
+                  <?php
                   wp_reset_query();
                   query_posts('post_type=post&posts_per_page=3');
                     if(have_posts()){
                          while(have_posts()){
                               the_post();
                             ?>
-                           <div class="col-md-4">
+                           <div class="col-md-4 on-tour">
                             <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
                             <div class="filter-item">
                              <?php
                                 if ( has_post_thumbnail() ){
                                        the_post_thumbnail('thumb-memo');
-                                   }  
+                                   }
                                 ?>
                               <?php the_excerpt(); ?>
                               <span >READ MORE</span>
                             </div>
                           </a>
                         </div>
-                            <?php 
+                            <?php
                          }
                    }
                   ?>

@@ -81,6 +81,21 @@
 #main-slide .carousel-control .fa-angle-right{
 	right: 0;
 }
+/*-- Animation --*/
+.carousel .item.active .animated1 {
+	-webkit-animation: fadeInDown .5s ease-in 300ms both;
+	animation: fadeInDown .5s ease-in 300ms both;
+}
+
+.carousel .item.active .animated2 {
+	-webkit-animation: bounceInDown 1s ease-in 800ms both;
+	animation: bounceInDown 1s ease-in 800ms both;
+}
+
+.carousel .item.active .animated3 {
+	-webkit-animation: bounceInDown 2s ease-in-out 800ms both;
+	animation: bounceInDown 2s ease-in-out 800ms both;
+}
 
 #main-slide .carousel-control i{
 	background: rgba(0,0,0,.7);
