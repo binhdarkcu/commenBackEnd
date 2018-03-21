@@ -2,10 +2,13 @@
 /* ! PRIMARY STYLES */
 html, body{width:100%; min-width:640px; }
 body {
-	font: $fontArial12; color:#fff;
+	font: $fontArial12; color:#999;
 	background: #fff;
 }
 a{text-decoration: none;}
+a:hover, a:active{
+	text-decoration: none!important;
+}
 .clear{clear:both;}
 
 .content700{width:700px;}

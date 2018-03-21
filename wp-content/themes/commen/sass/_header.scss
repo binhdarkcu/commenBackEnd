@@ -14,6 +14,14 @@ header {
             margin-left: 22px;
             margin-top: 5px;
             display: inline-block;
+            span {
+                color: #ff8300;
+                position: relative;
+                left: -31px;
+                font-family: "GothamBold";
+                top: -6px;
+                font-size: 16px;
+            }
         }
         &.navbar-shrink{
             background: #fff;
@@ -43,6 +51,11 @@ header {
                             background: url('../images/cart-icon.png') no-repeat;
                             background-size: 30px;
                         }
+                    }
+                }
+                &.current_page_item {
+                    a{
+                        font-weight: bold;
                     }
                 }
             }

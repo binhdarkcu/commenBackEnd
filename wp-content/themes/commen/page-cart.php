@@ -14,7 +14,7 @@
                     <div class="col-md-6">
                         <div class="productList">
                             <ul>
-                              <?php 
+                              <?php
                                 foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
                                       $_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
                                       $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
@@ -53,7 +53,7 @@
                 echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
               ?></h2>
                                         <div class="cd-item-select">
-                                           
+
                                           <table class="variations" cellspacing="0">
                                               <tbody>
                                                           <tr>
@@ -82,28 +82,29 @@
                                                                     echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
                                                                     ?>
                                             </div>
-                                                <div class="product-remove">
-                                                    <?php
-                                                        
-                                                        echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-                                                          '<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
-                                                          esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-                                                          __( 'Remove this item', 'woocommerce' ),
-                                                          esc_attr( $product_id ),
-                                                          esc_attr( $_product->get_sku() )
-                                                        ), $cart_item_key );
-                                                      ?>
-                                                </div>
+
+                                        </div>
+                                        <div class="product-remove">
+                                            <?php
+
+                                                echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+                                                  '<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+                                                  esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+                                                  __( 'Remove this item', 'woocommerce' ),
+                                                  esc_attr( $product_id ),
+                                                  esc_attr( $_product->get_sku() )
+                                                ), $cart_item_key );
+                                              ?>
                                         </div>
                                     </div>
                                 </li>
 
 
-                                    <?php 
+                                    <?php
                                  }
                               ?>
-                               
-                               
+
+
                             </ul>
                             <div class="subTotal">
                                 Sub Total: <?php

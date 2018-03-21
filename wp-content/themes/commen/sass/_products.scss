@@ -8,7 +8,9 @@
   .products_page-item {
     margin-bottom: 25px;
     text-align: center;
-
+    a:hover{
+        text-decoration: none;
+    }
     img {
       width: 100%;
       border: 14px solid $yellow-1;

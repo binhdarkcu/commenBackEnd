@@ -68,7 +68,6 @@ if ( post_password_required() ) {
 	</div>
  <div class="borderLine"></div>
       <div class="relatedProduct">
-      	  <h3>You may also like</h3>
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
@@ -81,7 +80,7 @@ if ( post_password_required() ) {
 	//	do_action( 'woocommerce_after_single_product_summary' );
 		echo do_shortcode('[related_products limit="6" columns="6"]');
 	?>
-   </div> 
+   </div>
   </div>
 </div>
 
